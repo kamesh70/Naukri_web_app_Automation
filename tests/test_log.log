@@ -1,0 +1,13 @@
+INFO     root:conftest.py:24 Starting WebDriver
+INFO     root:conftest.py:36 Logging in before test execution
+INFO     root:base_page.py:103 Entered text: 'kameshsulakshane@gmail.com' in element: ('id', 'usernameField')
+INFO     root:base_page.py:103 Entered text: 'Rovikamesh@70' in element: ('id', 'passwordField')
+INFO     root:base_page.py:75 Clicked on element: ('xpath', "//button[text()='Login']")
+INFO     root:test_search.py:69 test_search_year_slider 
+INFO     root:base_page.py:75 Clicked on element: ('xpath', "//span[contains(text(),'Search jobs here')]")
+INFO     root:base_page.py:103 Entered text: 'SDET' in element: ('xpath', "//input[@placeholder='Enter keyword / designation / companies']")
+INFO     root:base_page.py:103 Entered text: 'Mumbai,pune,bangalore' in element: ('xpath', "//input[@placeholder='Enter location']")
+INFO     root:base_page.py:75 Clicked on element: ('xpath', "//span[text()='Search']")
+INFO     root:conftest.py:59 TEST PASSED: tests/test_search.py::test_search_year_slider
+INFO     root:conftest.py:30 Quitting WebDriver
+9,706 - INFO - Quitting WebDriver
