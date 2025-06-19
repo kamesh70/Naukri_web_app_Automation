@@ -21,24 +21,18 @@ class ServicesPage(BasePage):
     def handle_new_tab_click(self,element_path):
         main_window = self.driver.current_window_handle
         self.click(element_path)
-        # Wait for new window
         self.wait.until(EC.new_window_is_opened([main_window]))
-        # Get all windows
         all_windows = self.driver.window_handles
-
-        # Switch to new window
         for window in all_windows:
             if window != main_window:
                 self.driver.switch_to.window(window)
                 break
         time.sleep(1)
-        # Do something in the new window...
         print(self.driver.title)
         url = self.current_page_url
         time.sleep(2)
-
         # ✅ Switch back to main window
-        self.driver.close()  # (optional) Close new window
+        self.driver.close()  #  Close new window
         self.driver.switch_to.window(main_window)
         time.sleep(0.2)
         return url
