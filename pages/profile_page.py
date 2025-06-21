@@ -1,10 +1,10 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
-import config.config
+import config.config_page
 from pages.base_page import BasePage
 import time
 from pynput.keyboard import Key,Controller
-from config.config import RESUME_FILE
+from config.config_page import RESUME_FILE
 
 
 class ProfilePage(BasePage):

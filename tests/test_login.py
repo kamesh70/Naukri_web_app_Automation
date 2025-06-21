@@ -1,6 +1,6 @@
 import pytest
 import logging
-
+from config.config_page import EMAIL, PASSWORD
 from pages.login_page import LoginPage
 import time
 
@@ -12,7 +12,7 @@ class TestLogin:
         # driver.get("https://www.naukri.com/nlogin/login")
 
         login_page = LoginPage(driver)
-        login_page.login("kameshsulakshane@gmail.com", "Rovikamesh@70")
+        login_page.login(EMAIL,PASSWORD)
 
         try:
             login_page.login_verify()

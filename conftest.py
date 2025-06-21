@@ -3,6 +3,7 @@ import logging
 import os
 from selenium import webdriver
 from pages.login_page import LoginPage
+from config.config_page import EMAIL, PASSWORD
 
 # Configure logging
 LOG_FILE = "test_log.log"
@@ -35,7 +36,7 @@ def logged_in_driver(driver):
     """Fixture to log in before tests requiring authentication."""
     logging.info("Logging in before test execution")
     login_page = LoginPage(driver)
-    login_page.user("kameshsulakshane@gmail.com", "Rovikamesh@70")  # Use valid credentials
+    login_page.user(EMAIL, PASSWORD)  # Use valid credentials
     return driver  # Return the driver in logged-in state
 
 def pytest_configure(config):
