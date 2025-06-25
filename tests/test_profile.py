@@ -64,6 +64,7 @@ class TestProfile:
         try:
             self.profile_page.edit_photo()
             self.profile_page.edit_photo_cancel()
+            time.sleep(2)
         except Exception as e:
             self.profile_page.capture_screenshot("test_edit_photo")  # Capture screenshot on failure
             logging.error(f"test_edit_photo.{e}")

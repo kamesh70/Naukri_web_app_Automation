@@ -18,7 +18,8 @@ class ProfilePage(BasePage):
     DELETE = (By.XPATH, "//div[@class='ltCont']/div[@class='lightbox model_open flipOpen']//div[@class='action right-align']/button")
     CROSSLAYER =(By.XPATH,"//div[@id='photoCropper' ]/div[@class='crossLayer']")
     MOVE_TO =(By.XPATH,"//div[@class='photoTrigger']")
-
+    image=(By.XPATH,"//img[@class='user-img']")
+    edit_icon_photo =(By.XPATH,"//div[@class='content-wrap']")
 
 
     def view_profile_click(self):
@@ -58,9 +59,8 @@ class ProfilePage(BasePage):
 
 
     def edit_photo(self):
-        ele = self.element_visible(self.MOVE_TO)
-        self.move_element(ele)
-        self.click(self.MOVE_TO)
+        self.move_element(self.image)
+        self.click(self.edit_icon_photo)
 
     def edit_photo_cancel(self):
         self.click(self.CROSSLAYER)
