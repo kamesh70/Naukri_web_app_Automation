@@ -6,7 +6,7 @@ class LoginPage(BasePage):
     PASSWORD = (By.ID, "passwordField")
     LOGIN_BTN = (By.XPATH, "//button[text()='Login']")
     VERIFY_LOGIN = (By.XPATH, "//a[text()=' profile']")
-    ERROR_MSG = (By.XPATH, "//span[@class='col s12 commonErrorMsg']")
+    ERROR_MSG = (By.XPATH, "//div[@class='col s12 commonErrorMsg']")
     USER_ERROR = (By.XPATH,"//span[@id='usernameField_err']")
     PASSWORD_ERROR = (By.XPATH,"//span[@id='passwordField_err']")
 
